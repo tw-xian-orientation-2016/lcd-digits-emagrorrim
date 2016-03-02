@@ -2,15 +2,32 @@ describe('splitNumber()', function() {
   var input;
 
   beforeEach(function() {
-    input = '3112603';
+    input = '910';
   });
 
   it('should split number into digits', function() {
 
     var output = splitNumber(input);
 
-    var expectObject = ['3', '1', '1', '2', '6', '0', '3'];
+    var expect = ['9', '1', '0'];
 
-    expect(output).toEqual(expectObject);
+    expect(output).toEqual(expect);
+  });
+});
+
+describe('convertToLCD()', function() {
+  var input;
+
+  beforeEach(function() {
+    input = ['9', '1', '0'];
+  });
+
+  it('should convert str number to lcd number', function() {
+
+    var output = convertToLCD(input);
+
+    var expect = ['._.|_|..|', '.....|..|', '._.|.||_|'];
+
+    expect(output).toEqual(expect);
   });
 });
