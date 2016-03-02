@@ -68,12 +68,12 @@ describe('join()', function() {
 
   it('should join lcd number in line', function() {
 
-    var output = splitInLine(input);
+    var output = joinStrs(input);
 
     var expectResult = [
-      ['._. ... ._.\n'],
-      ['|_| ..| |.|\n'],
-      ['..| ..| |_|\n']
+      '._. ... ._.\n',
+      '|_| ..| |.|\n',
+      '..| ..| |_|\n'
     ];
 
     expect(output).toEqual(expectResult);

@@ -22,3 +22,19 @@ function splitInLine(lcdShownNumbers) {
   });
   return [firstLineStrings, secondLineStrings, thirdLineStrings];
 }
+
+function joinStrs(lineStrings) {
+  var stringLines = [];
+  lineStrings.forEach(function(lineString) {
+    var stringLine = '';
+    for (var i = 0; i < lineString.length; i++) {
+      if (i != lineString.length - 1) {
+        stringLine += (lineString[i] + ' ');
+      } else {
+        stringLine += (lineString[i] + '\n');
+      }
+    }
+    stringLines.push(stringLine);
+  });
+  return stringLines;
+}
