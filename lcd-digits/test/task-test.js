@@ -12,7 +12,7 @@ describe('splitNumber()', function() {
       outputs.push(splitNumber(inputs[i]));
     }
 
-    var expectObject = ['3', '112', '603'];
+    var expectObject = ['3', '1', '1', '2', '6', '0', '3'];
 
     expect(outputs).toEqual(expectObject);
   });
