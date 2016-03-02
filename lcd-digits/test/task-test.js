@@ -33,3 +33,24 @@ describe('convertToLCD()', function() {
     expect(output).toEqual(expectResult);
   });
 });
+
+describe('splitInLine()', function() {
+  var input;
+
+  beforeEach(function() {
+    input = ['._.|_|..|', '.....|..|', '._.|.||_|'];
+  });
+
+  it('should split lcd number in line', function() {
+
+    var output = splitInLine(input);
+
+    var expectResult = [
+      ['._.', '...', '._.'],
+      ['|_|', '..|', '|.|'],
+      ['..|', '..|', '|_|']
+    ];
+
+    expect(output).toEqual(expectResult);
+  });
+});
