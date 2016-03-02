@@ -71,9 +71,9 @@ describe('join()', function() {
     var output = splitInLine(input);
 
     var expectResult = [
-      ['._. ... ._.'],
-      ['|_| ..| |.|'],
-      ['..| ..| |_|']
+      ['._. ... ._.\n'],
+      ['|_| ..| |.|\n'],
+      ['..| ..| |_|\n']
     ];
 
     expect(output).toEqual(expectResult);
