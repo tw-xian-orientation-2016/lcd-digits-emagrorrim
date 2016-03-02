@@ -9,25 +9,27 @@ describe('splitNumber()', function() {
 
     var output = splitNumber(input);
 
-    var expect = ['9', '1', '0'];
+    var expectResult = ['9', '1', '0'];
 
-    expect(output).toEqual(expect);
+    expect(output).toEqual(expectResult);
   });
 });
 
 describe('convertToLCD()', function() {
   var input;
+  var lcdNumbers;
 
   beforeEach(function() {
     input = ['9', '1', '0'];
+    lcdNumbers = loadLCDNumbers();
   });
 
   it('should convert str number to lcd number', function() {
 
-    var output = convertToLCD(input);
+    var output = convertToLCD(input, lcdNumbers);
 
-    var expect = ['._.|_|..|', '.....|..|', '._.|.||_|'];
+    var expectResult = ['._.|_|..|', '.....|..|', '._.|.||_|'];
 
-    expect(output).toEqual(expect);
+    expect(output).toEqual(expectResult);
   });
 });
