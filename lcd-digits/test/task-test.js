@@ -1,19 +1,16 @@
 describe('splitNumber()', function() {
-  var inputs;
+  var input;
 
   beforeEach(function() {
-    inputs = '3112603';
+    input = '3112603';
   });
 
   it('should split number into digits', function() {
 
-    var outputs = [];
-    for (var i = 0; i < inputs.length; i++) {
-      outputs.push(splitNumber(inputs[i]));
-    }
+    var output = splitNumber(input);
 
     var expectObject = ['3', '1', '1', '2', '6', '0', '3'];
 
-    expect(outputs).toEqual(expectObject);
+    expect(output).toEqual(expectObject);
   });
 });
