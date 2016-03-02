@@ -79,3 +79,28 @@ describe('join()', function() {
     expect(output).toEqual(expectResult);
   });
 });
+
+describe('show()', function() {
+  var input;
+
+  beforeEach(function() {
+    input = [
+      '._. ... ._.\n',
+      '|_| ..| |.|\n',
+      '..| ..| |_|\n'
+    ];
+  });
+
+  it('should split lcd number in line', function() {
+
+    spyOn(console, 'log');
+
+    var output = show(input);
+
+    var expectResult = '._. ... ._.\n'
+                      +'|_| ..| |.|\n'
+                      +'..| ..| |_|\n';
+
+    expect(console.log).toHaveBeenCalledWith(expectResult);
+  });
+});

@@ -38,3 +38,11 @@ function joinStrs(lineStrings) {
   });
   return stringLines;
 }
+
+function show(stringLines) {
+  var lcdNumberStr = '';
+  stringLines.forEach(function(stringLine) {
+    lcdNumberStr += stringLine;
+  });
+  console.log(lcdNumberStr);
+}
