@@ -14,7 +14,7 @@ function convertToLCD(digits, lcdNumbers) {
 function splitInLine(lcdShownNumbers) {
   var firstLineStrings = [];
   var secondLineStrings = [];
-  var thirdLineStrings = []
+  var thirdLineStrings = [];
   lcdShownNumbers.forEach(function(lcdShownNumber) {
      firstLineStrings.push(lcdShownNumber.substr(0, 3));
      secondLineStrings.push(lcdShownNumber.substr(3, 3));
@@ -23,16 +23,13 @@ function splitInLine(lcdShownNumbers) {
   return [firstLineStrings, secondLineStrings, thirdLineStrings];
 }
 
-function joinStrs(lineStrings) {
+function join(lineStrings) {
   var stringLines = [];
-  lineStrings.forEach(function(lineString) {
+  lineStrings.forEach(function(lineStringArr) {
     var stringLine = '';
-    for (var i = 0; i < lineString.length; i++) {
-      if (i != lineString.length - 1) {
-        stringLine += (lineString[i] + ' ');
-      } else {
-        stringLine += (lineString[i] + '\n');
-      }
+    for (var i = 0; i < lineStringArr.length; i++) {
+      var tailStr =  (i === lineStringArr.length - 1) ? '\n': ' ';
+      stringLine += (lineStringArr[i] + tailStr);
     }
     stringLines.push(stringLine);
   });

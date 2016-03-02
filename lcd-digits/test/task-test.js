@@ -68,7 +68,7 @@ describe('join()', function() {
 
   it('should join lcd number in line', function() {
 
-    var output = joinStrs(input);
+    var output = join(input);
 
     var expectResult = [
       '._. ... ._.\n',
