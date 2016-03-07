@@ -16,3 +16,9 @@ Example: 910
 |_| ..| |.|
 ..| ..| |_|
 ```
+task1:3min
+task2:12min
+task3:14min
+task4:15min
+task5:5min
+total:49min
